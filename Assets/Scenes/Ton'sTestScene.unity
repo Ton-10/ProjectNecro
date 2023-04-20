@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 194888611}
   - component: {fileID: 194888616}
   - component: {fileID: 194888615}
+  - component: {fileID: 194888617}
+  - component: {fileID: 194888618}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -251,9 +253,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853defd90b17273468065d131876c4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 10
+  playerStats: {fileID: 0}
   CanMove: 1
   anim: {fileID: 0}
+--- !u!114 &194888617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194888610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19ed51a58f984c48ba7897b99faa7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &194888618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194888610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76efd24ed0c9f2c46a6fb0949f055346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
 --- !u!1 &462871127
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Distance: 25
+  mode: 0
 --- !u!1 &1019311355
 GameObject:
   m_ObjectHideFlags: 0

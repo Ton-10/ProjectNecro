@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MapMovement : MonoBehaviour
 {
-    public float MoveSpeed;
+    public Stats playerStats;
     public bool CanMove;
     public Animator anim;
 
@@ -15,6 +15,7 @@ public class MapMovement : MonoBehaviour
     void Start()
     {
         //anim = transform.Find("Body").gameObject.GetComponent<Animator>();
+        playerStats = gameObject.GetComponent<Stats>();
         body = gameObject.GetComponent<Rigidbody>();
         UpdatePosition();
     }
@@ -29,7 +30,7 @@ public class MapMovement : MonoBehaviour
                 if (CanMove)
                 {
                     Vector3 move = new Vector3(-Input.GetAxisRaw("Vertical"),0 ,Input.GetAxisRaw("Horizontal"));
-                    move = move.normalized * MoveSpeed;
+                    move = move.normalized * playerStats.MovementSpeed;
                     body.velocity = move;
                     //UpdatePosition();
                 }
