@@ -39,6 +39,10 @@ public class FollowCamera : MonoBehaviour
         }
 
         // Set camera distance and look at target (making a 45 deg angle about the axis perpendicular to the direction it is facing
+        if (Camera.main.orthographic)
+        {
+            Camera.main.orthographicSize = cameraDistance;
+        }
         transform.position = Target.transform.position + new Vector3(cameraDistance, cameraDistance, 0);
         transform.LookAt(Target.transform.position);
     }
