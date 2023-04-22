@@ -27,12 +27,16 @@ public class Stats : MonoBehaviour
         
     }
 
-    public void PickupPart(GameObject part)
+    public void addStats(Stats somaStats)
     {
         //Add to stats based on part's stats
-        //Add to player model
+        MovementSpeed += somaStats.MovementSpeed;
+        AttackSpeed += somaStats.AttackSpeed;
+        PhysicalAttack += somaStats.PhysicalAttack;
+        MagicAttack += somaStats.MagicAttack;
+        SpecialAttack += somaStats.SpecialAttack;
     }
-    public void DamagePart(GameObject part)
+    public void lowerRandomStat(int damageValue)
     {
         //Get part's stats, negate values from player's current stats
         //Damage part a random amount (reduce stat values, etc...)

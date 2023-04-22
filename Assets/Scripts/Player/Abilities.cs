@@ -6,6 +6,7 @@ public class Abilities : MonoBehaviour
 {
     public Stats playerStats;
     private bool startAttack, attacking, endAttack;
+    private int reach;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +40,32 @@ public class Abilities : MonoBehaviour
         }
         if (Input.GetButtonDown("Interact"))
         {
-            print("interacted");
             // run interact logic
+            GameObject[] soma = GameObject.FindGameObjectsWithTag("Soma");
+            GameObject closestObject = null;
+            for (int i = 0; i < soma.Length; i++)
+            {
+                float newDistance = Vector3.Magnitude(soma[i].transform.position - gameObject.transform.position);
+                if(closestObject != null)
+                {
+                    float oldDistance = Vector3.Magnitude(closestObject.transform.position - gameObject.transform.position);
+                    if (newDistance < oldDistance)
+                    {
+                        closestObject = soma[i];
+                    }
+                }
+                else
+                {
+                    closestObject = soma[i];
+                }
+            }
+            print("Interacted with" + closestObject.name);
+            if(closestObject.GetComponent<Stats>() != null)
+            {
+                Stats somaStats = closestObject.GetComponent<Stats>();
+                playerStats.addStats(somaStats);
+                // add soma model to player
+            }
         }
     }
     IEnumerator attackCoolDown(float wait)
