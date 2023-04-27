@@ -1,11 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MapMovement : MonoBehaviour
 {
     public Stats playerStats;
     public bool CanMove;
     public Animator anim;
+    // assign the actions asset to this field in the inspector:
+    public InputActionAsset actions;
+
+    // private field to store move action reference
+    private InputAction moveAction;
 
     private Rigidbody body;
     private float deadZone = 0f;
@@ -15,6 +21,7 @@ public class MapMovement : MonoBehaviour
     void Start()
     {
         //anim = transform.Find("Body").gameObject.GetComponent<Animator>();
+        moveAction = actions.FindActionMap("PlayerActions").FindAction("Move");
         playerStats = gameObject.GetComponent<Stats>();
         body = gameObject.GetComponent<Rigidbody>();
         UpdatePosition();
@@ -23,13 +30,14 @@ public class MapMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 moveVector = moveAction.ReadValue<Vector2>();
         if (WaitTime < Time.time)
         {
-            if (Math.Abs(Input.GetAxisRaw("Vertical")) > deadZone || Math.Abs(Input.GetAxisRaw("Horizontal")) > deadZone)
+            if (Math.Abs(moveVector.y) > deadZone || Math.Abs(moveVector.x) > deadZone)
             {
                 if (CanMove)
                 {
-                    Vector3 move = new Vector3(-Input.GetAxisRaw("Vertical"),0 ,Input.GetAxisRaw("Horizontal"));
+                    Vector3 move = new Vector3(-moveVector.y, 0 , moveVector.x);
                     move = move.normalized * playerStats.MovementSpeed;
                     body.velocity = move;
                     //UpdatePosition();
@@ -52,5 +60,13 @@ public class MapMovement : MonoBehaviour
     public void PlayMoveAnimation()
     {
         //anim.SetTrigger("Move");
+    }
+    void OnEnable()
+    {
+        actions.FindActionMap("PlayerActions").Enable();
+    }
+    void OnDisable()
+    {
+        actions.FindActionMap("PlayerActions").Disable();
     }
 }

@@ -14,10 +14,13 @@ public class FollowCamera : MonoBehaviour
         City,
     }
 
+    private Camera UICamera;
+
     // Start is called before the first frame update
     void Start()
     {
         Target = GameObject.FindGameObjectWithTag("Player").transform.Find("Body").gameObject;
+        UICamera = Camera.main.transform.Find("UI Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -42,6 +45,9 @@ public class FollowCamera : MonoBehaviour
         if (Camera.main.orthographic)
         {
             Camera.main.orthographicSize = cameraDistance;
+            UICamera.orthographic = true;
+            UICamera.orthographicSize = cameraDistance;
+
         }
         transform.position = Target.transform.position + new Vector3(cameraDistance, cameraDistance, 0);
         transform.LookAt(Target.transform.position);
