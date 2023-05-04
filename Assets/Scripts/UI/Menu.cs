@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class Menu : StandardUI
@@ -9,12 +10,18 @@ public class Menu : StandardUI
     public List<GameObject> innerElements;
     public List<GameObject> backgroundElements;
     public List<GameObject> accentElements;
+    public InputActionAsset actions;
+    public bool Enabled;
+
+    private InputAction menuAction;
+
 
     private Color currentColor;
     // Start is called before the first frame update
     void Start()
     {
-        foreach(Transform child in transform.GetComponentsInChildren<Transform>())
+        menuAction = actions.FindActionMap("PlayerActions").FindAction("Menu");
+        foreach (Transform child in transform.GetComponentsInChildren<Transform>())
         {
             if (child.name.Contains("Container"))
             {
@@ -51,6 +58,12 @@ public class Menu : StandardUI
     // Update is called once per frame
     void Update()
     {
-        
+        if (menuAction.WasPressedThisFrame())
+        {
+            Enabled = !Enabled;
+            gameObject.GetComponent<Canvas>().enabled = Enabled;
+        }
+
+
     }
 }
