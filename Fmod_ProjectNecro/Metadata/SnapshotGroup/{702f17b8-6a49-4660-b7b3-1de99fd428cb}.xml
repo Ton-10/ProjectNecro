@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="SnapshotGroup" id="{702f17b8-6a49-4660-b7b3-1de99fd428cb}">
+		<property name="name">
+			<value>medium priority</value>
+		</property>
+		<relationship name="folder">
+			<destination>{430b179b-84a5-4e11-a6e0-d8c151cebb35}</destination>
+		</relationship>
+	</object>
+</objects>
