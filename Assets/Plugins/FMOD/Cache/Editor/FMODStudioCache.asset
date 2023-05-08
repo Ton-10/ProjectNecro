@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8009499051903673775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/env/amb/Obj_Torch_Loop
+  m_EditorClassIdentifier: 
+  Path: event:/env/amb/Obj_Torch_Loop
+  Guid:
+    Data1: -2009422351
+    Data2: 1247477095
+    Data3: 1048379564
+    Data4: 1104625309
+  Banks:
+  - {fileID: -3708477811141523632}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20000
 --- !u!114 &-7864436251998868730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,10 +116,10 @@ MonoBehaviour:
   Path: Fmod_ProjectNecro/Build/Desktop/sfx.bank
   Name: sfx
   StudioPath: bank:/sfx
-  lastModified: 638190693841507190
+  lastModified: 638190914583316048
   FileSizes:
   - Name: Desktop
-    Value: 4330
+    Value: 7684
   Exists: 1
 --- !u!114 &-3386509097790492680
 MonoBehaviour:
@@ -109,10 +136,10 @@ MonoBehaviour:
   Path: Fmod_ProjectNecro/Build/Desktop/music.assets.bank
   Name: music.assets
   StudioPath: bank:/music.assets
-  lastModified: 638190667432699057
+  lastModified: 638190914583255996
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 563808
   Exists: 1
 --- !u!114 &-1253317431066611653
 MonoBehaviour:
@@ -129,10 +156,10 @@ MonoBehaviour:
   Path: Fmod_ProjectNecro/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638190693238655809
+  lastModified: 638190914576111578
   FileSizes:
   - Name: Desktop
-    Value: 1716
+    Value: 1836
   Exists: 1
 --- !u!114 &-432676144138729341
 MonoBehaviour:
@@ -149,10 +176,10 @@ MonoBehaviour:
   Path: Fmod_ProjectNecro/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638190693238645801
+  lastModified: 638190914576091559
   FileSizes:
   - Name: Desktop
-    Value: 4130
+    Value: 4430
   Exists: 1
 --- !u!114 &-12777640156146970
 MonoBehaviour:
@@ -200,42 +227,17 @@ MonoBehaviour:
   - {fileID: 6644856138752445957}
   - {fileID: 1037628982875386619}
   - {fileID: -5268995262594630831}
-  - {fileID: 965221430362786330}
   - {fileID: -7108046229520902783}
+  - {fileID: -8009499051903673775}
+  - {fileID: 3051533654764455907}
+  - {fileID: 4986447337492838324}
   EditorParameters: []
   MasterBanks:
   - {fileID: -432676144138729341}
   StringsBanks:
   - {fileID: -1253317431066611653}
-  cacheTime: 638190693841674578
+  cacheTime: 638190914583479454
   cacheVersion: 131603
---- !u!114 &965221430362786330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/env/amb/Torch_Loop
-  m_EditorClassIdentifier: 
-  Path: event:/env/amb/Torch_Loop
-  Guid:
-    Data1: -2009422351
-    Data2: 1247477095
-    Data3: 1048379564
-    Data4: 1104625309
-  Banks:
-  - {fileID: -3708477811141523632}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 20000
 --- !u!114 &1037628982875386619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,10 +280,10 @@ MonoBehaviour:
   Path: Fmod_ProjectNecro/Build/Desktop/music.bank
   Name: music
   StudioPath: bank:/music
-  lastModified: 638190667432682705
+  lastModified: 638190914576141611
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 2092
   Exists: 1
 --- !u!114 &2610140087494296061
 MonoBehaviour:
@@ -298,11 +300,65 @@ MonoBehaviour:
   Path: Fmod_ProjectNecro/Build/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638190693238655809
+  lastModified: 638190914576101570
   FileSizes:
   - Name: Desktop
     Value: 494
   Exists: 1
+--- !u!114 &3051533654764455907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/env/amb/Amb_Cave_Drips
+  m_EditorClassIdentifier: 
+  Path: event:/env/amb/Amb_Cave_Drips
+  Guid:
+    Data1: 1604106263
+    Data2: 1174330853
+    Data3: 910757801
+    Data4: 1804517735
+  Banks:
+  - {fileID: -3708477811141523632}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 5
+  MaxDistance: 20
+  Length: 12000
+--- !u!114 &4986447337492838324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/Music_Caves_Test_01
+  m_EditorClassIdentifier: 
+  Path: event:/music/Music_Caves_Test_01
+  Guid:
+    Data1: 412285568
+    Data2: 1279568121
+    Data3: -1402846317
+    Data4: -1500169213
+  Banks:
+  - {fileID: 1692885634838996393}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 43200
 --- !u!114 &6378657928171406848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,10 +374,10 @@ MonoBehaviour:
   Path: Fmod_ProjectNecro/Build/Desktop/sfx.assets.bank
   Name: sfx.assets
   StudioPath: bank:/sfx.assets
-  lastModified: 638190693841674578
+  lastModified: 638190914583479454
   FileSizes:
   - Name: Desktop
-    Value: 518720
+    Value: 919392
   Exists: 1
 --- !u!114 &6644856138752445957
 MonoBehaviour:
