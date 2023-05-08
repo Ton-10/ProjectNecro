@@ -960,7 +960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8090987018810613907, guid: 66549f633f030084892be0a7fc789361, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.73999965
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 8090987018810613907, guid: 66549f633f030084892be0a7fc789361, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1421,7 +1421,7 @@ MonoBehaviour:
       Data2: 1247477095
       Data3: 1048379564
       Data4: 1104625309
-    Path: event:/env/amb/Torch_Loop
+    Path: event:/env/amb/Obj_Torch_Loop
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -1756,7 +1756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1648531738099242844, guid: 1ba284c0e8d26264487591b18ead0fa5, type: 3}
       propertyPath: orthographic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1648531738099242846, guid: 1ba284c0e8d26264487591b18ead0fa5, type: 3}
       propertyPath: m_Name
@@ -2020,7 +2020,6 @@ GameObject:
   m_Component:
   - component: {fileID: 523805079}
   - component: {fileID: 523805081}
-  - component: {fileID: 523805080}
   m_Layer: 0
   m_Name: Floor (8)
   m_TagString: Untagged
@@ -2043,19 +2042,6 @@ Transform:
   m_Father: {fileID: 1566564055}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
---- !u!65 &523805080
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523805078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000001, z: 0.20001018}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &523805081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4734,7 +4720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6121335113171013261, guid: c1f3bebf3fb53a54981eecf20efbb610, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -686670.9
+      value: -911678.2
       objectReference: {fileID: 0}
     - target: {fileID: 6136453029051531515, guid: c1f3bebf3fb53a54981eecf20efbb610, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5777,7 +5763,7 @@ MonoBehaviour:
       Data2: 1247477095
       Data3: 1048379564
       Data4: 1104625309
-    Path: event:/env/amb/Torch_Loop
+    Path: event:/env/amb/Obj_Torch_Loop
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -6213,7 +6199,6 @@ GameObject:
   m_Component:
   - component: {fileID: 809167198}
   - component: {fileID: 809167200}
-  - component: {fileID: 809167199}
   m_Layer: 0
   m_Name: Floor (4)
   m_TagString: Untagged
@@ -6236,19 +6221,6 @@ Transform:
   m_Father: {fileID: 1566564055}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
---- !u!65 &809167199
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809167197}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000001, z: 0.20001018}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &809167200
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6510,7 +6482,6 @@ GameObject:
   m_Component:
   - component: {fileID: 913800079}
   - component: {fileID: 913800081}
-  - component: {fileID: 913800080}
   m_Layer: 0
   m_Name: Floor (5)
   m_TagString: Untagged
@@ -6533,19 +6504,6 @@ Transform:
   m_Father: {fileID: 1566564055}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
---- !u!65 &913800080
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913800078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000001, z: 0.20001018}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &913800081
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7056,7 +7014,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1124016082}
   - component: {fileID: 1124016084}
-  - component: {fileID: 1124016083}
   m_Layer: 0
   m_Name: Floor (6)
   m_TagString: Untagged
@@ -7079,19 +7036,6 @@ Transform:
   m_Father: {fileID: 1566564055}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
---- !u!65 &1124016083
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124016081}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000001, z: 0.20001018}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1124016084
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7445,7 +7389,7 @@ MonoBehaviour:
       Data2: 1247477095
       Data3: 1048379564
       Data4: 1104625309
-    Path: event:/env/amb/Torch_Loop
+    Path: event:/env/amb/Obj_Torch_Loop
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -9420,6 +9364,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1965346179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8090987018810613911, guid: 66549f633f030084892be0a7fc789361, type: 3}
+  m_PrefabInstance: {fileID: 267967426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1965346190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965346179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1604106263
+      Data2: 1174330853
+      Data3: 910757801
+      Data4: 1804517735
+    Path: event:/env/amb/Amb_Cave_Drips
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 5
+  OverrideMaxDistance: 20
 --- !u!1 &1967678836
 GameObject:
   m_ObjectHideFlags: 0
@@ -9707,7 +9687,7 @@ MonoBehaviour:
       Data2: 1247477095
       Data3: 1048379564
       Data4: 1104625309
-    Path: event:/env/amb/Torch_Loop
+    Path: event:/env/amb/Obj_Torch_Loop
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -9911,6 +9891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2049595930}
   - component: {fileID: 2049595931}
+  - component: {fileID: 2049595932}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -9969,6 +9950,37 @@ MonoBehaviour:
       Data3: 494159278
       Data4: -1498395377
     Path: event:/env/amb/Amb_Cave_01
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2049595932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049595929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 412285568
+      Data2: 1279568121
+      Data3: -1402846317
+      Data4: -1500169213
+    Path: event:/music/Music_Caves_Test_01
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -10088,7 +10100,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2114604392}
   - component: {fileID: 2114604394}
-  - component: {fileID: 2114604393}
   m_Layer: 0
   m_Name: Floor (7)
   m_TagString: Untagged
@@ -10111,19 +10122,6 @@ Transform:
   m_Father: {fileID: 1566564055}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
---- !u!65 &2114604393
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114604391}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000001, z: 0.20001018}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &2114604394
 SpriteRenderer:
   m_ObjectHideFlags: 0

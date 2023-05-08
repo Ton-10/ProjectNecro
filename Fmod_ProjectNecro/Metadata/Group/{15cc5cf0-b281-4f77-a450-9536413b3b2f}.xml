@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="MixerGroup" id="{15cc5cf0-b281-4f77-a450-9536413b3b2f}">
 		<property name="name">
 			<value>amb</value>
@@ -17,8 +17,20 @@
 	<object class="MixerBusEffectChain" id="{f32ae79a-4104-408f-a67f-5677deed541f}">
 		<relationship name="effects">
 			<destination>{b5daee62-d1ac-43eb-9acf-7a2ee8afa49a}</destination>
+			<destination>{0305e143-ae87-468e-8e1c-ebf770c0590d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7c13e5f7-8381-4dec-89a7-7b27607e638b}" />
 	<object class="MixerBusFader" id="{b5daee62-d1ac-43eb-9acf-7a2ee8afa49a}" />
+	<object class="MixerSend" id="{0305e143-ae87-468e-8e1c-ebf770c0590d}">
+		<property name="level">
+			<value>-18</value>
+		</property>
+		<property name="inputFormat">
+			<value>2</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{ce28f7bf-3ff9-4477-ade7-e89776e14d60}</destination>
+		</relationship>
+	</object>
 </objects>
