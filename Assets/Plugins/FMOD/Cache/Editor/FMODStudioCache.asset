@@ -1,0 +1,408 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8009499051903673775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/env/amb/Obj_Torch_Loop
+  m_EditorClassIdentifier: 
+  Path: event:/env/amb/Obj_Torch_Loop
+  Guid:
+    Data1: -2009422351
+    Data2: 1247477095
+    Data3: 1048379564
+    Data4: 1104625309
+  Banks:
+  - {fileID: -3708477811141523632}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20000
+--- !u!114 &-7864436251998868730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/ui.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/ui.assets.bank
+  Name: ui.assets
+  StudioPath: bank:/ui.assets
+  lastModified: 638190667432789156
+  FileSizes:
+  - Name: Desktop
+    Value: 494
+  Exists: 1
+--- !u!114 &-7108046229520902783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/env/amb/Amb_Cave_01
+  m_EditorClassIdentifier: 
+  Path: event:/env/amb/Amb_Cave_01
+  Guid:
+    Data1: -1207990244
+    Data2: 1105093396
+    Data3: 494159278
+    Data4: -1498395377
+  Banks:
+  - {fileID: -3708477811141523632}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 30000
+--- !u!114 &-5268995262594630831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/high priority/pause_menu
+  m_EditorClassIdentifier: 
+  Path: snapshot:/high priority/pause_menu
+  Guid:
+    Data1: -1958126638
+    Data2: 1144915926
+    Data3: 172715431
+    Data4: -191916080
+  Banks:
+  - {fileID: -432676144138729341}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3708477811141523632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/sfx.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/sfx.bank
+  Name: sfx
+  StudioPath: bank:/sfx
+  lastModified: 638190914583316048
+  FileSizes:
+  - Name: Desktop
+    Value: 7684
+  Exists: 1
+--- !u!114 &-3386509097790492680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/music.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/music.assets.bank
+  Name: music.assets
+  StudioPath: bank:/music.assets
+  lastModified: 638190914583255996
+  FileSizes:
+  - Name: Desktop
+    Value: 563808
+  Exists: 1
+--- !u!114 &-1253317431066611653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638190914576111578
+  FileSizes:
+  - Name: Desktop
+    Value: 1836
+  Exists: 1
+--- !u!114 &-432676144138729341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638190914576091559
+  FileSizes:
+  - Name: Desktop
+    Value: 4430
+  Exists: 1
+--- !u!114 &-12777640156146970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/ui.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/ui.bank
+  Name: ui
+  StudioPath: bank:/ui
+  lastModified: 638190667432769138
+  FileSizes:
+  - Name: Desktop
+    Value: 494
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -1253317431066611653}
+  - {fileID: 2610140087494296061}
+  - {fileID: -432676144138729341}
+  - {fileID: -3386509097790492680}
+  - {fileID: 1692885634838996393}
+  - {fileID: 6378657928171406848}
+  - {fileID: -3708477811141523632}
+  - {fileID: -7864436251998868730}
+  - {fileID: -12777640156146970}
+  EditorEvents:
+  - {fileID: 6644856138752445957}
+  - {fileID: 1037628982875386619}
+  - {fileID: -5268995262594630831}
+  - {fileID: -7108046229520902783}
+  - {fileID: -8009499051903673775}
+  - {fileID: 3051533654764455907}
+  - {fileID: 4986447337492838324}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -432676144138729341}
+  StringsBanks:
+  - {fileID: -1253317431066611653}
+  cacheTime: 638190914583479454
+  cacheVersion: 131603
+--- !u!114 &1037628982875386619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/high priority/music_all_mute
+  m_EditorClassIdentifier: 
+  Path: snapshot:/high priority/music_all_mute
+  Guid:
+    Data1: 1296299190
+    Data2: 1332469164
+    Data3: -135356497
+    Data4: -1018656909
+  Banks:
+  - {fileID: -432676144138729341}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1692885634838996393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/music.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/music.bank
+  Name: music
+  StudioPath: bank:/music
+  lastModified: 638190914576141611
+  FileSizes:
+  - Name: Desktop
+    Value: 2092
+  Exists: 1
+--- !u!114 &2610140087494296061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/Master.assets.bank
+  Name: Master.assets
+  StudioPath: bank:/Master.assets
+  lastModified: 638190914576101570
+  FileSizes:
+  - Name: Desktop
+    Value: 494
+  Exists: 1
+--- !u!114 &3051533654764455907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/env/amb/Amb_Cave_Drips
+  m_EditorClassIdentifier: 
+  Path: event:/env/amb/Amb_Cave_Drips
+  Guid:
+    Data1: 1604106263
+    Data2: 1174330853
+    Data3: 910757801
+    Data4: 1804517735
+  Banks:
+  - {fileID: -3708477811141523632}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 5
+  MaxDistance: 20
+  Length: 12000
+--- !u!114 &4986447337492838324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music/Music_Caves_Test_01
+  m_EditorClassIdentifier: 
+  Path: event:/music/Music_Caves_Test_01
+  Guid:
+    Data1: 412285568
+    Data2: 1279568121
+    Data3: -1402846317
+    Data4: -1500169213
+  Banks:
+  - {fileID: 1692885634838996393}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 43200
+--- !u!114 &6378657928171406848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/sfx.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod_ProjectNecro/Build/Desktop/sfx.assets.bank
+  Name: sfx.assets
+  StudioPath: bank:/sfx.assets
+  lastModified: 638190914583479454
+  FileSizes:
+  - Name: Desktop
+    Value: 919392
+  Exists: 1
+--- !u!114 &6644856138752445957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/high priority/sfx_all_mute
+  m_EditorClassIdentifier: 
+  Path: snapshot:/high priority/sfx_all_mute
+  Guid:
+    Data1: 630698597
+    Data2: 1157703623
+    Data3: -731510135
+    Data4: 535687346
+  Banks:
+  - {fileID: -432676144138729341}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
