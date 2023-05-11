@@ -9,10 +9,12 @@ public class Abilities : MonoBehaviour
     public List<GameObject> EquippedSoma;
     // assign the actions asset to this field in the inspector:
     public InputActionAsset actions;
+    
 
     // private field to store move action reference
     private InputAction attackAction, castAction, interactAction, moveAction;
-
+    private Animator anim;
+    private MapMovement movement;
     private bool startAttack, attacking, endAttack;
     private int reach;
     GameObject[] soma = null;
@@ -20,6 +22,8 @@ public class Abilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = transform.Find("Body").gameObject.GetComponent<Animator>();
+        movement = gameObject.GetComponent<MapMovement>();
         attackAction = actions.FindActionMap("PlayerActions").FindAction("Attack");
         castAction = actions.FindActionMap("PlayerActions").FindAction("Cast");
         interactAction = actions.FindActionMap("PlayerActions").FindAction("Interact");
@@ -39,19 +43,28 @@ public class Abilities : MonoBehaviour
         if (attackAction.WasPressedThisFrame() && !endAttack)
         {
             startAttack = true;
-            print("Start attacking");
+            anim.SetBool("Attack", true);
+            movement.CanMove = false;
+            // Play swing noise here
         }
         if (attackAction.WasPerformedThisFrame() && startAttack && !endAttack)
         {
             attacking = true;
             startAttack = false;
-            print("Is holding");
+        }
+        if (attacking
+            && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            movement.CanMove = true;
+            // Play parry stance activate noise here
         }
         if (attackAction.WasReleasedThisFrame() && attacking)
         {
             attacking = false;
             endAttack = true;
-            print("stop attacking");
+            anim.SetBool("Attack", false);
+            movement.CanMove = true;
             StartCoroutine(attackCoolDown(0.5f / playerStats.AttackSpeed));
         }
         if (castAction.WasPressedThisFrame())
@@ -72,6 +85,7 @@ public class Abilities : MonoBehaviour
                 closestObject.SetActive(false);
                 closestObject = null;
                 // add soma model to player
+                // Play pickup noise here
             }
         }
     }
@@ -103,5 +117,13 @@ public class Abilities : MonoBehaviour
                 closestObject.transform.Find("InteractionPopup").GetComponent<Canvas>().enabled = true;
             }
         }
+    }
+    void OnEnable()
+    {
+        actions.FindActionMap("PlayerActions").Enable();
+    }
+    void OnDisable()
+    {
+        actions.FindActionMap("PlayerActions").Disable();
     }
 }
