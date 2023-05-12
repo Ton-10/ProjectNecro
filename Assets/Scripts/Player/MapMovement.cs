@@ -39,7 +39,7 @@ public class MapMovement : MonoBehaviour
                     Vector3 move = new Vector3(-moveVector.y, 0 , moveVector.x);
                     move = move.normalized * playerStats.MovementSpeed;
                     body.velocity = move;
-                    transform.rotation = Quaternion.LookRotation(move);
+                    transform.Find("Body").rotation = Quaternion.LookRotation(move);
                     UpdatePosition();
                 }
                 else
