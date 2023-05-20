@@ -17,6 +17,7 @@ public class Abilities : MonoBehaviour
     private MapMovement movement;
     private bool startAttack, attacking, endAttack;
     private int reach;
+    private GameObject weapon;
     GameObject[] soma = null;
     GameObject closestObject = null;
     // Start is called before the first frame update
@@ -29,6 +30,7 @@ public class Abilities : MonoBehaviour
         interactAction = actions.FindActionMap("PlayerActions").FindAction("Interact");
         moveAction = actions.FindActionMap("PlayerActions").FindAction("Move");
         playerStats = gameObject.GetComponent<Stats>();
+        weapon = GameObject.FindGameObjectWithTag("Sword");
         reach = 20;
     }
     // Update is called once per frame
@@ -46,6 +48,21 @@ public class Abilities : MonoBehaviour
             anim.SetBool("Attack", true);
             movement.CanMove = false;
             // Play swing noise here
+        }
+        if (weapon.GetComponent<WeaponCollider>().hits.Count > 0 
+            && attacking 
+            && anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1 
+            && anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0)
+        {
+            // hit enemy
+            foreach (GameObject hit in weapon.GetComponent<WeaponCollider>().hits)
+            {
+                EnemyController enemy = hit.GetComponent<EnemyController>();
+                if (!enemy.gettingHit)
+                {
+                    StartCoroutine(enemy.Hit(playerStats.PhysicalAttack));
+                }
+            }
         }
         if (attackAction.WasPerformedThisFrame() && startAttack && !endAttack)
         {

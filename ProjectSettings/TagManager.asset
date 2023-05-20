@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Soma
   - PlayerHandAnchor
+  - Sword
+  - Enemy
   layers:
   - Default
   - TransparentFX

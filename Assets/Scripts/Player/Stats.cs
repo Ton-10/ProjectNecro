@@ -9,6 +9,7 @@ public class Stats : MonoBehaviour
     public float PhysicalAttack { get; set; }
     public float MagicAttack { get; set; }
     public float SpecialAttack { get; set; }
+    public float HitPoints { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class Stats : MonoBehaviour
         PhysicalAttack = 1;
         MagicAttack = 1;
         SpecialAttack = 1;
+        HitPoints = 2;
     }
 
     // Update is called once per frame
