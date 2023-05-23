@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject SomaDrop;
     public int detectionRange;
     public float speed;
     public bool gettingHit;
@@ -40,7 +41,9 @@ public class EnemyController : MonoBehaviour
         if (enemyStats.HitPoints <= 0)
         {
             Debug.Log("dying");
-            //die, drop soma, play death animation if exists
+            Destroy(gameObject, 1);
+            // Drop soma
+            Instantiate(SomaDrop, transform.position, Quaternion.identity);
         }
         yield return new WaitForSeconds(hitDelay);
         gettingHit = false;
@@ -61,9 +64,12 @@ public class EnemyController : MonoBehaviour
     IEnumerator moveToPlayer()
     {
         yield return new WaitForSeconds(moveDelay);
-        Vector3 direction = (Player.transform.position - transform.position).normalized;
-        body.velocity = direction * speed;
-        transform.rotation = Quaternion.LookRotation(-direction);
+        if (!anim.GetBool("Attacking") && !gettingHit)
+        {
+            Vector3 direction = (Player.transform.position - transform.position).normalized;
+            body.velocity = direction * speed;
+            transform.rotation = Quaternion.LookRotation(-direction);
+        }
         anim.SetBool("Moving", false);
     }
 }
