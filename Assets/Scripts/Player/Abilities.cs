@@ -46,6 +46,7 @@ public class Abilities : MonoBehaviour
         {
             startAttack = true;
             anim.SetBool("Attack", true);
+            movement.SetSomaAnimationTriggers("Attack", true);
             movement.CanMove = false;
             // Play swing noise here
         }
@@ -86,6 +87,7 @@ public class Abilities : MonoBehaviour
             attacking = false;
             endAttack = true;
             anim.SetBool("Attack", false);
+            movement.SetSomaAnimationTriggers("Attack", false);
             movement.CanMove = true;
             StartCoroutine(attackCoolDown(0.5f / playerStats.AttackSpeed));
         }
@@ -105,6 +107,7 @@ public class Abilities : MonoBehaviour
                 EquippedSoma.Add(closestObject);
                 closestObject.tag = "Untagged";
                 closestObject.transform.Find("InteractionPopup").GetComponent<Canvas>().enabled = false;
+                closestObject.SetActive(false);
                 closestObject = null;
                 // Play pickup noise here
             }

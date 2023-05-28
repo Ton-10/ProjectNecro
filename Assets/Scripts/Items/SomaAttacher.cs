@@ -6,6 +6,11 @@ public class SomaAttacher : MonoBehaviour
 {
     public BodyPart AttachmentLocation;
     public Stats somaStats;
+    public string SomaType;
+    public Material SomaMat;
+    public GameObject SomaModel;
+    public GameObject SomaOverlay;
+    GameObject player;
 
     // Torso ORG-spine.003
     // Hips ORG-spine
@@ -23,7 +28,10 @@ public class SomaAttacher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         somaStats = gameObject.GetComponent<Stats>();
+        SomaType = gameObject.name;
+        SomaMat = gameObject.GetComponent<Renderer>().material;
         AttachmentLocation =  AttachmentLocation == BodyPart.None ? BodyPart.Head : AttachmentLocation;
     }
 
@@ -34,78 +42,117 @@ public class SomaAttacher : MonoBehaviour
     }
     public void AttachSoma()
     {
-        if(AttachmentLocation == BodyPart.Head)
+        SkinnedMeshRenderer renderer;
+        Material[] mats;
+        if (!player.transform.Find("Body/"+SomaType))
         {
-            foreach (GameObject item in GameObject.FindGameObjectsWithTag("SomaAnchor"))
+            SomaOverlay = Instantiate(SomaModel, player.transform.Find("Body"));
+            SomaOverlay.name = SomaType;
+            renderer = SomaOverlay.transform.Find("skeleton").GetComponent<SkinnedMeshRenderer>();
+            mats = renderer.materials;
+            foreach (Material mat in mats)
             {
-                if (item.name.Equals("DEF-spine.005"))
+                mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, 0f);
+            }
+            player.GetComponent<MapMovement>().SomaAnims.Add(SomaOverlay.GetComponent<Animator>());
+        }
+        else
+        {
+            SomaOverlay = player.transform.Find("Body/" + SomaType).gameObject;
+        }
+        renderer = SomaOverlay.transform.Find("skeleton").GetComponent<SkinnedMeshRenderer>();
+        mats = renderer.materials;
+        if (AttachmentLocation == BodyPart.Head)
+        {
+            foreach (Material mat in mats)
+            {
+                if (mat.name.Contains("Head"))
                 {
-                    gameObject.transform.parent = item.transform;
-                    gameObject.transform.localPosition = new Vector3(0, 0, 0);
-                };
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
             }
         }
         if (AttachmentLocation == BodyPart.Torso)
         {
-            foreach (GameObject item in GameObject.FindGameObjectsWithTag("SomaAnchor"))
+            foreach (Material mat in mats)
             {
-                if (item.name.Equals("ORG-spine.003"))
+                if (mat.name.Contains("Torso"))
                 {
-                    gameObject.transform.parent = item.transform;
-                    gameObject.transform.localPosition = new Vector3(0, 0, 0);
-                };
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                    Debug.Log("Changed Torso");
+                }
             }
         }
         if (AttachmentLocation == BodyPart.RightArm)
         {
-            foreach (GameObject item in GameObject.FindGameObjectsWithTag("SomaAnchor"))
+            foreach (Material mat in mats)
             {
-                if (item.name.Equals("ORG-spine.003"))
+                if (mat.name.Contains("RArm"))
                 {
-                    Transform anchor1 = item.transform.Find("ORG-shoulder.R/DEF-upper_arm.R/DEF-upper_arm.R.001");
-                    Transform anchor2 = anchor1.Find("DEF-forearm.R/DEF-forearm.R.001");
-                    gameObject.transform.parent = anchor1;
-                    gameObject.transform.localPosition = new Vector3(0, 0, 0);
-                };
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
+                if (mat.name.Contains("RForearm"))
+                {
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
+                if (mat.name.Contains("RHand"))
+                {
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
             }
         }
         if (AttachmentLocation == BodyPart.LeftArm)
         {
-            foreach (GameObject item in GameObject.FindGameObjectsWithTag("SomaAnchor"))
+            foreach (Material mat in mats)
             {
-                if (item.name.Equals("ORG-spine.003"))
+                if (mat.name.Contains("LArm"))
                 {
-                    Transform anchor1 = item.transform.Find("ORG-shoulder.L/DEF-upper_arm.L/DEF-upper_arm.L.001");
-                    Transform anchor2 = anchor1.Find("DEF-forearm.L/DEF-forearm.L.001");
-                    gameObject.transform.parent = anchor1;
-                    gameObject.transform.localPosition = new Vector3(0, 0, 0);
-                };
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
+                if (mat.name.Contains("LForearm"))
+                {
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
+                if (mat.name.Contains("LHand"))
+                {
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
             }
         }
         if (AttachmentLocation == BodyPart.RightLeg)
         {
-            foreach (GameObject item in GameObject.FindGameObjectsWithTag("SomaAnchor"))
+            foreach (Material mat in mats)
             {
-                if (item.name.Equals("ORG-spine"))
+                if (mat.name.Contains("RLeg"))
                 {
-                    Transform anchor1 = item.transform.Find("DEF-thigh.R/DEF-thigh.R.001");
-                    Transform anchor2 = anchor1.Find("DEF-shin.R/DEF-shin.R.001");
-                    gameObject.transform.parent = anchor1;
-                    gameObject.transform.localPosition = new Vector3(0, 0, 0);
-                };
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
+                if (mat.name.Contains("RShin"))
+                {
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
+                if (mat.name.Contains("RFoot"))
+                {
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
             }
         }
         if (AttachmentLocation == BodyPart.LeftLeg)
         {
-            foreach (GameObject item in GameObject.FindGameObjectsWithTag("SomaAnchor"))
+            foreach (Material mat in mats)
             {
-                if (item.name.Equals("ORG-spine"))
+                if (mat.name.Contains("LLeg"))
                 {
-                    Transform anchor1 = item.transform.Find("DEF-thigh.L/DEF-thigh.L.001");
-                    Transform anchor2 = anchor1.Find("DEF-shin.L/DEF-shin.L.001");
-                    gameObject.transform.parent = anchor1;
-                    gameObject.transform.localPosition = new Vector3(0, 0, 0);
-                };
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
+                if (mat.name.Contains("LShin"))
+                {
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
+                if (mat.name.Contains("LFoot"))
+                {
+                    mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
+                }
             }
         }
     }

@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  SomaDrop: {fileID: 6836269098068292869, guid: 599b32267a5a13b48b4dc0747386b072, type: 3}
+  SomaModel: {fileID: 1413338735229916648, guid: 13f853f0aa63b97469ee720fea278703, type: 3}
   detectionRange: 0
   speed: 0
   gettingHit: 0

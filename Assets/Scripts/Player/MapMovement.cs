@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,13 +7,15 @@ public class MapMovement : MonoBehaviour
 {
     public Stats playerStats;
     public bool CanMove;
-    
+    public List<Animator> SomaAnims;
+
     // assign the actions asset to this field in the inspector:
     public InputActionAsset actions;
 
     // private field to store move action reference
     private InputAction moveAction;
     private Animator anim;
+    
     private Rigidbody body;
     private float deadZone = 0f;
     private float WaitTime;
@@ -46,12 +49,14 @@ public class MapMovement : MonoBehaviour
                 {
                     body.velocity = new Vector3(0, 0, 0);
                     anim.SetBool("Moving", false);
+                    SetSomaAnimationTriggers("Moving", false);
                 }
             }
             else if( body.velocity != new Vector3(0,0,0))
             {
                body.velocity = new Vector3(0, 0, 0);
                anim.SetBool("Moving", false);
+                SetSomaAnimationTriggers("Moving", false);
             }
         }
     }
@@ -66,6 +71,7 @@ public class MapMovement : MonoBehaviour
     public void PlayMoveAnimation()
     {
         anim.SetBool("Moving", true);
+        SetSomaAnimationTriggers("Moving", true);
     }
     void OnEnable()
     {
@@ -74,5 +80,17 @@ public class MapMovement : MonoBehaviour
     void OnDisable()
     {
         actions.FindActionMap("PlayerActions").Disable();
+    }
+    public void SetSomaAnimationTriggers(string name, bool value)
+    {
+        if(SomaAnims.Count > 0)
+        {
+            foreach (Animator anim in SomaAnims)
+            {
+                Debug.Log("Set animation " + anim.name);
+                Debug.Log("Set animation " + name + " to " + value);
+                anim.SetBool(name, value);
+            }
+        }
     }
 }

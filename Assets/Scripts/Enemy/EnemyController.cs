@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     public GameObject Player;
     public GameObject SomaDrop;
+    public GameObject SomaModel;
     public int detectionRange;
     public float speed;
     public bool gettingHit;
@@ -43,7 +44,12 @@ public class EnemyController : MonoBehaviour
             Debug.Log("dying");
             Destroy(gameObject, 1);
             // Drop soma
-            Instantiate(SomaDrop, transform.position, Quaternion.identity);
+            
+            
+            GameObject soma = Instantiate(SomaDrop, transform.position, Quaternion.identity);
+            soma.name = gameObject.name + "Soma";
+            soma.GetComponent<SomaAttacher>().SomaModel = SomaModel;
+            soma.GetComponent<SomaAttacher>().AttachmentLocation = (SomaAttacher.BodyPart) Random.Range(1, System.Enum.GetNames(typeof(SomaAttacher.BodyPart)).Length);
         }
         yield return new WaitForSeconds(hitDelay);
         gettingHit = false;

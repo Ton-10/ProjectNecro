@@ -242,6 +242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttachmentLocation: 3
   somaStats: {fileID: 0}
+  SomaType: 
+  SomaMat: {fileID: 2100000, guid: 3b854c8e976a125458785f556862acd4, type: 2}
+  SomaModel: {fileID: 1413338735229916648, guid: 13f853f0aa63b97469ee720fea278703, type: 3}
+  SomaOverlay: {fileID: 0}
 --- !u!1001 &6836269098457213943
 PrefabInstance:
   m_ObjectHideFlags: 0
