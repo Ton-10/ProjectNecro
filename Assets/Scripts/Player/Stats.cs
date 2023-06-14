@@ -45,6 +45,26 @@ public class Stats : MonoBehaviour
         //Add updated stats to this
         //Add to player model
     }
-
-
+    public float GetStatByName(string name)
+    {
+        name = name.ToLower();
+        switch (name)
+        {
+            case "physicalattack":
+                return PhysicalAttack;
+            case "magicattack":
+                return MagicAttack;
+            case "movementspeed":
+                return MovementSpeed;
+            case "attackspeed":
+                return AttackSpeed;
+            case "specialattack":
+                return SpecialAttack;
+            case "hitpoints":
+                return HitPoints;
+            default:
+                return .404f;
+        }
+        
+    }
 }

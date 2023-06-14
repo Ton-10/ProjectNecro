@@ -79,7 +79,6 @@ public class SomaAttacher : MonoBehaviour
                 if (mat.name.Contains("Torso"))
                 {
                     mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, SomaMat.color.a);
-                    Debug.Log("Changed Torso");
                 }
             }
         }

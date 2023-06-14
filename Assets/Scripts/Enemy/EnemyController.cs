@@ -37,19 +37,24 @@ public class EnemyController : MonoBehaviour
     {
         anim.SetBool("Hit", true);
         gettingHit = true;
-        Debug.Log("got Hit");
         enemyStats.HitPoints -= damageIn;
         if (enemyStats.HitPoints <= 0)
         {
-            Debug.Log("dying");
-            Destroy(gameObject, 1);
+            
+            Material mat = gameObject.transform.Find("SlimeMesh").GetComponent<SkinnedMeshRenderer>().material;
+            float startingAlpha = mat.color.a;
+            gameObject.transform.Find("DeathParticles").gameObject.SetActive(true);
+            for (int i = 6; i > 0; i--)
+            {
+                mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, mat.color.a - startingAlpha/6);
+                yield return new WaitForSeconds(0.1f);
+            }
             // Drop soma
-            
-            
             GameObject soma = Instantiate(SomaDrop, transform.position, Quaternion.identity);
             soma.name = gameObject.name + "Soma";
             soma.GetComponent<SomaAttacher>().SomaModel = SomaModel;
             soma.GetComponent<SomaAttacher>().AttachmentLocation = (SomaAttacher.BodyPart) Random.Range(1, System.Enum.GetNames(typeof(SomaAttacher.BodyPart)).Length);
+            Destroy(gameObject);
         }
         yield return new WaitForSeconds(hitDelay);
         gettingHit = false;

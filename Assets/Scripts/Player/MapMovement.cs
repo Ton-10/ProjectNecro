@@ -87,8 +87,6 @@ public class MapMovement : MonoBehaviour
         {
             foreach (Animator anim in SomaAnims)
             {
-                Debug.Log("Set animation " + anim.name);
-                Debug.Log("Set animation " + name + " to " + value);
                 anim.SetBool(name, value);
             }
         }
